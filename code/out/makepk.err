@@ -1,0 +1,4 @@
+RuntimeError: module compiled against API version 0xb but this version of numpy is 0xa
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error: *** JOB 7772025 ON sh-113-08 CANCELLED AT 2018-03-06T13:55:15 ***
+slurmstepd: error: *** STEP 7772025.1 ON sh-113-08 CANCELLED AT 2018-03-06T13:55:15 ***

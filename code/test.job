@@ -1,0 +1,12 @@
+#!/bin/bash
+#SBATCH --job-name=testrun
+#SBATCH --output=test1.out
+#SBATCH --error=test1.err
+#SBATCH --time=00:00:10
+#SBATCH -p normal,owners,iric,hns
+#SBATCH --mem-per-cpu=2G
+#SBATCH --nodes=1
+echo "start"
+echo "preparing nbodykit"
+echo "done with preparing nbodykit"
+#/home/users/chto/.conda/envs/nbodykit-env/bin/python make_power.py

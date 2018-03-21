@@ -1,0 +1,15 @@
+#!/bin/bash
+#SBATCH --job-name=makepk
+#SBATCH --output=out/makejk.out
+#SBATCH --error=out/makejk.err
+#SBATCH --time=10:00:00
+#SBATCH -p normal,owners,hns
+#SBATCH --mem-per-cpu=32G
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node 1
+echo "start"
+source deactivate 
+echo "preparing nbodykit"
+source activate nbodykit-env 
+echo "done with preparing nbodykit"
+srun /home/users/chto/.conda/envs/nbodykit-env/bin/python make_jack.py
